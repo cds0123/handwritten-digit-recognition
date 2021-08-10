@@ -1,0 +1,15 @@
+# R project
+.RData
+.Rproj.user/
+
+# Generated model data
+model/
+
+# Web
+www/
+
+# shinyapp
+rsconnect/
+
+# Residuals
+images/

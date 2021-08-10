@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+}
+
+p {
+  font-size: 16px;
+}
+
+#main-app {
+  margin-top: 20px;
+}
+
+#about {
+  max-width: 1000px;
+  width: 80%;
+  margin: auto;
+}
+
+#download-btn-group {
+  position: absolute;
+  top: 80px;
+  right: 15%;
+}
+
+#download-btn-group__tooltip {
+  position: relative;
+  visibility: hidden;
+}
+
+#download-btn-group__tooltip:hover {
+  visibility: visibule;
+}
+
+#canvas-group {
+  margin-top: 30px;
+  width: 400px;
+  justify-content: center;
+  text-align: center;
+}
+
+#canvas-group__component {
+  width: 80%;
+  min-width: 300px;
+  margin: auto;
+}
+
+#result-group {
+  width: 80%;
+  min-width: 400px;
+  max-width: 700px;
+  margin-left: 50px;
+}
+
+#predicted-image-group {
+  width: 400px;
+  position: relative;
+  display: block;
+}
+
+#predicted_image {
+  position: absolute;
+  top: 50%;
+  left: 120px;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  display: inline-block;
+}
+
+#predicted-image {
+  margin: auto;
+}
+
+#count_matrix {
+  display: none;
+}
+
+#count_plot {
+  display: none;
+}
+
+#prob_plot {
+  margin: auto;
+  margin-top: 20px;
+  display: none;
+}

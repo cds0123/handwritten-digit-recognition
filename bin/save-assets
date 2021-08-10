@@ -1,0 +1,37 @@
+#!/bin/bash
+
+# Check if directories already exist
+if [[ ! -e 'www' ]]; then
+    echo 'www/ does not exist. Creating a new directory...'
+    mkdir -p www/js
+    mkdir -p www/css
+else
+    if [[ ! -e 'www/js' ]]; then
+        echo 'www/js/ does not exist. Creating a new directory...'
+        mkdir -p www/js
+    fi
+    if [[ ! -e 'www/css' ]]; then
+        echo 'www/css/ does not exist. Creating a new directory...'
+        mkdir -p www/css
+    fi
+fi
+
+# Minify javascript file(s)
+declare -a jsfiles=("main")
+
+for f in "${jsfiles[@]}"
+do
+    echo "Minifying $f.js"
+    uglifyjs --compress --mangle -- js/"$f".js > www/js/"$f".min.js
+done
+
+# Move CSS(s) to www/ folder
+declare -a cssfiles=("main")
+
+for f in "${cssfiles[@]}"
+do
+    echo "Copying $f.css to www/css/"
+    cp css/"$f".css www/css/"$f".css
+done
+
+echo "Done!!"
